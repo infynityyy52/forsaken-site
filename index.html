@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="icon.png" type="image/png">
+        <meta charset="UTF-8">
+        <title>Forsaken</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <body>
+
+            <h1 class="text_color">Forsaken</h1>
+
+            <h2 class="text_color">Forsaken — популярная игра на платформе Roblox. Разработчик Souldrivenlove выпустил её 28 июля, 2024 года.</h2>
+            
+            <h3 class="text_color">Forsaken — ассимитричная хоррор игра в которой от 1 до 8 выживших, пытаются устоять перед 1 убийцей 4 минуты, помогая своим товарищам и чиня генераторы. Но с каждым убийством таймер прибавляет к себе 45 секунд. Цель выживших — выжить до окончания таймера. Цель убийцы — не дать им это сделать.</h3>
+
+            <div id="musicCatalog" class="modal">
+    <div class="modal-content" style="max-width: 600px;">
+        <button class="close-btn" onclick="closeMusicCatalog()">&times;</button>
+        <h3>🎵 Музыка из Forsaken</h3>
+        
+        <div class="music-list">
+            <div class="music-item" onclick="playTrack('playtime.mp3', 'It\'s Playtime')">
+                <span>🎵 </span>
+                <button>▶️</button>
+            </div>
+            
+            <div class="music-item" onclick="playTrack('deep_sleep.mp3', 'Deep Sleep')">
+                <span>🎧 Deep Sleep</span>
+                <button>▶️</button>
+            </div>
+            
+            <div class="music-item" onclick="playTrack('a_tight_squeeze.mp3', 'A Tight Squeeze')">
+                <span>🎃 A Tight Squeeze</span>
+                <button>▶️</button>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px; padding: 15px; background: rgba(255,107,107,0.1); border-radius: 10px;">
+            <p>🎧 Сейчас играет: <span id="currentTrack">Ничего</span></p>
+            <button onclick="stopMusic()" style="background: #ff4444; margin: 5px;">⏹️ Стоп</button>
+        </div>
+    </div>
+</div>
+
+<div id="miniPlayer" class="mini-player" style="display: none;">
+    <div class="mini-player-content">
+        <span id="miniTrackName">Ничего не играет</span>
+        <div class="mini-controls">
+            <button id="playPauseBtn" onclick="togglePlayPause()">⏸️</button>
+            <button onclick="stopMusic()">⏹️</button>
+            <button onclick="closeMiniPlayer()">❌</button>
+        </div>
+    </div>
+</div>
+
+<!-- СЧЕТЧИК ПОСЕТИТЕЛЕЙ -->
+<div id="visitorCounter" style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 107, 107, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+    z-index: 1000;
+">
+    👥 Посетителей: <span id="visitorCount">0</span>
+</div>
+
+<!-- КНОПКА АДМИНА - ТОЛЬКО НА ГЛАВНОЙ -->
+<div id="adminButton" style="
+    position: fixed;
+    bottom: 120px;
+    left: 20px;
+    z-index: 1000;
+">
+    <button onclick="toggleAdminMenu()" style="
+        background: rgba(255, 107, 107, 0.9);
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 12px;
+        box-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
+    ">💬 Админ</button>
+    
+    <div id="adminMenu" style="
+        display: none;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        background: rgba(255, 107, 107, 0.95);
+        border-radius: 8px;
+        padding: 10px;
+        min-width: 150px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    ">
+        <button onclick="sendMessage('bug')" style="width: 100%; margin: 2px 0; padding: 5px; background: rgba(255,255,255,0.2); color: white; border: none; border-radius: 4px; cursor: pointer;">🐛 Баг</button>
+        <button onclick="sendMessage('idea')" style="width: 100%; margin: 2px 0; padding: 5px; background: rgba(255,255,255,0.2); color: white; border: none; border-radius: 4px; cursor: pointer;">💡 Идея</button>
+        <button onclick="sendMessage('thanks')" style="width: 100%; margin: 2px 0; padding: 5px; background: rgba(255,255,255,0.2); color: white; border: none; border-radius: 4px; cursor: pointer;">❤️ Спасибо</button>
+    </div>
+</div>
+
+<!-- КНОПКА РАЗДЕЛОВ -->
+<div id="sectionsButton" class="sections-button">
+    <button onclick="openSections()">📂 Разделы</button>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО РАЗДЕЛОВ -->
+<div id="sectionsModal" class="modal">
+    <div class="modal-content sections-grid" style="max-width: 800px;">
+        <button class="close-btn" onclick="closeSections();">&times;</button>
+        <h3>🎮 Выберите раздел</h3>
+        
+        <div class="sections-container">
+            <div class="section-card" onclick="openSection('characters')">
+                <img src="char.jpg" alt="Персонажи">
+                <h4>👹 Персонажи</h4>
+                <p>Узнайте о персах игры!</p>
+            </div>
+            
+            <div class="section-card" onclick="openSection('lor')">
+                <img src="lor.jpg" alt="Главы">
+                <h4>📖 Сюжет</h4>
+                <p>Подробный лор игры</p>
+            </div>
+            
+            <div class="section-card" onclick="openSection('music')">
+                <img src="music.jpg">
+                <h4>🎶 Музыка</h4>
+                <p>Музыка из Форсакена</p>
+            </div>
+
+            <div class="section-card" onclick="openSection('achievements')">
+                <img src="scrin.jpg" alt="Достижения">
+                <h4>🏆 Достижения</h4>
+                <p>Разблокируй все ачивки!</p>
+            </div> 
+
+            <div class="section-card" onclick="openSection('games')">
+                <img src="games.jpg" alt="Игры">
+                <h4>🎮 Мини-игры</h4>
+                <p>Развлечения и челленджи</p>
+            </div>
+            
+            <div class="section-card locked" id="spectreSection" onclick="tryOpenSpectre()">
+                <img src="spectre.jpg" alt="Спектр">
+                <div id="spectreChains" class="chains-overlay"></div>
+                <h4>👁️ Спектр</h4>
+                <p>Истинная история...</p>
+            </div>
+        </div>
+    </div>
+</div>
+<button onclick="resetAchievements()">Сбросить ачивки</button>
+
+            <script src="script.js"></script>
+        </body>
+</html>
