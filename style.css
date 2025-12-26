@@ -1,0 +1,1061 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMnv1rNGMVb-9LCKkGdpKTEM1sXlwhMvi7Qg&s');
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.text_color {
+    color: red;
+}
+
+.text_color_blue {
+    color: blue
+}
+
+.text_color_green {
+    color: green
+}
+
+.text_color_yellow {
+    color: yellow
+}
+
+.text_color_gray {
+    color: gray
+}
+
+.text_color_pink {
+    color: palevioletred
+}
+
+.text_color_black {
+    color: rgb(117, 104, 104)
+}
+
+.text_color_sky {
+    color: rgb(0, 255, 255)
+}
+
+.text_color_purple {
+    color: purple
+}
+
+.text_color_brown {
+    color: brown
+}
+
+.text_color_bisque {
+    color: bisque
+}
+
+.hover-effect {
+    transition: all 0.3s ease; 
+    transform: scale(1); 
+}
+
+.hover-effect:hover {
+    transform: scale(1.2); 
+    filter: brightness(1.3); 
+}
+
+button {
+    transition: all 0.3s ease;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: red;
+    box-shadow: 0 5px 15px rgba(255,0,0,0.4);
+}
+
+
+img {
+    transition: all 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5) contrast(1.1);
+}
+
+.dark-theme {
+    background: 
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdj3fonfEFcFslKie6vLxKxf3w8lVl8a8uaQ&s');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.dark-theme p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.dark-theme button {
+    background: #333;
+    border: 1px solid #666;
+    color: #fff;
+}
+
+.dark-theme button:hover {
+    background: #ff4444;
+    border-color: #ff6666;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background: #444;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #ff6b6b;
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+    color: white;
+    text-align: center;
+    max-width: 500px;
+    animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes modalDisappear {
+    from { opacity: 1; transform: translate(-50%, -50%); }
+    to { opacity: 0; transform: translate(-50%, -60%); }
+}
+
+.modal-disappear {
+    animation: modalDisappear 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.age-check-fade {
+    transition: all 1.5s ease;
+}
+
+.age-check-fade.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(5px);
+}
+
+@keyframes pageLoad {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+.page-content {
+    animation: pageLoad 1s ease-out;
+}
+
+.animate-delay-1 { animation-delay: 0.2s; }
+.animate-delay-2 { animation-delay: 0.4s; }
+.animate-delay-3 { animation-delay: 0.6s; }
+
+.fade-in-element {
+    opacity: 0;
+    animation: pageLoad 0.8s ease-out forwards;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: auto;
+}
+
+.music-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.music-item:hover {
+    background: rgba(255, 107, 107, 0.2);
+}
+
+.mini-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 2px solid #ff6b6b;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    z-index: 1500;
+    min-width: 250px;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+.mini-player-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-controls button {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sections-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.sections-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.section-card {
+    background: rgba(255, 107, 107, 0.1);
+    border: 2px solid #ff6b6b;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.section-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.sections-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px !important;
+    left: auto !important;
+    z-index: 1000;
+    display: none;
+    transition: bottom 0.3s ease;
+}
+
+.sections-button.player-active {
+    bottom: 140px;
+}
+
+@keyframes stunPulse {
+    0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+@keyframes stunFlash {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+@keyframes teleportPuff {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(3); }
+}
+
+@keyframes warningFlash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes infectionPulse {
+    0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes infectionFlash {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+@keyframes bossFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes musicPulse {
+    0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.7; transform: translateX(-50%) scale(1.1); }
+}
+
+.character-card {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 350px;
+    background: rgba(255,107,107,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #ff6b6b;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.character-card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.3;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.character-card h4 {
+    margin-top: 0;
+    color: #ff6b6b;
+    font-size: 18px;
+}
+
+.character-card small {
+    color: #ff6b6b;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,107,107,0.5);
+}
+
+.character-card h4 {
+    margin-top: 0;
+    color: #ff6b6b;
+}
+
+.character-card small {
+    color: #ff6b6b;
+    font-style: italic;
+}
+
+.modal-open {
+    overflow: hidden !important;
+}
+
+.music-list {
+    max-height: 400px; /* ограничиваем высоту */
+    overflow-y: auto; /* вертикальная прокрутка */
+    padding: 10px 0;
+}
+
+/* Красивый скроллбар */
+.music-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.music-list::-webkit-scrollbar-track {
+    background: rgba(255,107,107,0.1);
+    border-radius: 10px;
+}
+
+.music-list::-webkit-scrollbar-thumb {
+    background: #ff6b6b;
+    border-radius: 10px;
+}
+
+#boss {
+    user-select: none !important;
+}
+
+@keyframes critFloat {
+    0% { opacity: 1; transform: translateY(0px); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
+
+@keyframes victoryFlash {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+@keyframes enemyDissolve {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0); filter: brightness(3); }
+}
+
+/* УНИВЕРСАЛЬНЫЕ КРАСИВЫЕ СКРОЛЛБАРЫ ДЛЯ ВСЕГО САЙТА */
+
+/* Для всех элементов с прокруткой */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 10px;
+    margin: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff5252, #ff7979);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+    transform: scale(1.1);
+}
+
+*::-webkit-scrollbar-corner {
+    background: rgba(255, 107, 107, 0.1);
+}
+
+/* Для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ff6b6b rgba(255, 107, 107, 0.1);
+}
+
+/* Основной скроллбар страницы */
+body::-webkit-scrollbar {
+    width: 14px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6b6b, #ff4757);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Текст поверх картинки */
+h1, h2, h3 {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Тень для читаемости */
+    background: rgba(0,0,0,0.5); /* Полупрозрачный фон */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* КРАСИВАЯ ПРОКРУТКА ДЛЯ РАЗДЕЛОВ */
+#sectionsModal .modal-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+#sectionsModal .modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 10px;
+}
+
+#sectionsModal .modal-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#sectionsModal .modal-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff5252, #ff7979);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+    transform: scale(1.1);
+}
+
+/* Если нужно для sections-container */
+.sections-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sections-container::-webkit-scrollbar-track {
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 8px;
+}
+
+.sections-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border-radius: 8px;
+}
+
+.sections-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff5252, #ff7979);
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+#sectionsModal .modal-content {
+    max-height: 70vh; /* вместо 80% */
+    overflow-y: auto;
+}
+
+#adminButton {
+    position: fixed !important;
+    bottom: 80px !important;
+    left: 20px !important;
+    z-index: 9999 !important;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes victoryFade {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes victoryGlow {
+    0%, 100% { text-shadow: 0 0 50px #FFD700; }
+    50% { text-shadow: 0 0 100px #FFD700, 0 0 150px #FFD700; }
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+@keyframes steamNotification {
+    from { transform: translateX(100%) scale(0.8); opacity: 0; }
+    to { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+@keyframes steamNotificationOut {
+    from { transform: translateX(0) scale(1); opacity: 1; }
+    to { transform: translateX(100%) scale(0.8); opacity: 0; }
+}
+
+@keyframes glitch {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    60% { transform: translateX(-1px); }
+    80% { transform: translateX(1px); }
+}
+
+@keyframes portalSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes portalPulse {
+    0%, 100% { box-shadow: 0 0 30px #FFD700; }
+    50% { box-shadow: 0 0 60px #FFD700, 0 0 90px #FF0000; }
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 20px #FFD700; }
+    to { text-shadow: 0 0 40px #FFD700; }
+}
+
+@keyframes epicScale {
+    0% { transform: scale(0) rotate(180deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes cardAppear {
+    0% { transform: scale(0) rotate(180deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.rare-card {
+    animation: cardGlow 2s infinite;
+}
+
+@keyframes glitchScreen {
+    0%, 100% { filter: hue-rotate(0deg); }
+    25% { filter: hue-rotate(90deg); }
+    50% { filter: hue-rotate(180deg); }
+    75% { filter: hue-rotate(270deg); }
+}
+
+@keyframes textFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes screamFlash {
+    0%, 100% { background: #FF0000; }
+    50% { background: #000000; }
+}
+
+@keyframes screamShake {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-5px, -5px) rotate(-2deg); }
+    50% { transform: translate(5px, 5px) rotate(2deg); }
+    75% { transform: translate(-3px, 3px) rotate(-1deg); }
+}
+
+@keyframes staticFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes glitchText {
+    0%, 100% { text-shadow: 2px 2px 0px #FF0000; }
+    25% { text-shadow: -2px -2px 0px #FF0000; }
+    50% { text-shadow: 2px -2px 0px #FF0000; }
+    75% { text-shadow: -2px 2px 0px #FF0000; }
+}
+
+.section-card.locked {
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+.section-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-card.locked {
+    filter: grayscale(100%) brightness(0.4);
+    opacity: 0.7;
+}
+
+.chains-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            rgba(120, 120, 120, 0.9) 0px,
+            rgba(120, 120, 120, 0.9) 8px,
+            rgba(80, 80, 80, 0.9) 8px,
+            rgba(80, 80, 80, 0.9) 16px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            rgba(100, 100, 100, 0.8) 0px,
+            rgba(100, 100, 100, 0.8) 8px,
+            rgba(60, 60, 60, 0.8) 8px,
+            rgba(60, 60, 60, 0.8) 16px
+        );
+    border: 3px solid #555;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ff4444;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.chains-overlay::before {
+    content: "🔒"; /* только замок */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+.section-card.locked h4,
+.section-card.locked p {
+    position: relative;
+    z-index: 11; /* поверх цепей */
+    color: #888; /* серый цвет для заблокированного */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+@keyframes chainBreak {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+    100% { opacity: 0; transform: scale(0); }
+}
+
+/* Глитч-эффект для раздела Спектр */
+#spectreSection:hover {
+    animation: spectreGlitch 0.3s infinite;
+}
+
+#spectreSection:hover h4,
+#spectreSection:hover p {
+    animation: textCorruption 0.5s infinite;
+    text-shadow: 
+        2px 0 #ff0000,
+        -2px 0 #00ffff,
+        0 2px #ff00ff,
+        0 -2px #ffff00;
+}
+
+#spectreSection:hover img {
+    filter: hue-rotate(180deg) contrast(200%) brightness(150%);
+    animation: imageGlitch 0.2s infinite;
+}
+
+@keyframes spectreGlitch {
+    0%, 100% { 
+        transform: translateX(0); 
+        filter: hue-rotate(0deg);
+    }
+    10% { 
+        transform: translateX(-2px); 
+        filter: hue-rotate(90deg);
+    }
+    20% { 
+        transform: translateX(2px); 
+        filter: hue-rotate(180deg);
+    }
+    30% { 
+        transform: translateX(-1px); 
+        filter: hue-rotate(270deg);
+    }
+    40% { 
+        transform: translateX(1px); 
+        filter: hue-rotate(360deg);
+    }
+    50% { 
+        transform: translateX(-3px); 
+        filter: hue-rotate(45deg) contrast(300%);
+    }
+    60% { 
+        transform: translateX(3px); 
+        filter: hue-rotate(135deg) brightness(200%);
+    }
+    70% { 
+        transform: translateX(-1px); 
+        filter: hue-rotate(225deg) saturate(500%);
+    }
+    80% { 
+        transform: translateX(1px); 
+        filter: hue-rotate(315deg) invert(50%);
+    }
+    90% { 
+        transform: translateX(-2px); 
+        filter: hue-rotate(0deg) contrast(150%);
+    }
+}
+
+@keyframes imageGlitch {
+    0%, 100% { 
+        transform: scale(1); 
+        filter: hue-rotate(0deg) contrast(100%);
+    }
+    25% { 
+        transform: scale(1.02) skewX(2deg); 
+        filter: hue-rotate(90deg) contrast(200%);
+    }
+    50% { 
+        transform: scale(0.98) skewX(-2deg); 
+        filter: hue-rotate(180deg) contrast(300%);
+    }
+    75% { 
+        transform: scale(1.01) skewY(1deg); 
+        filter: hue-rotate(270deg) contrast(150%);
+    }
+}
+
+/* Дополнительные эффекты */
+#spectreSection:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 0, 0, 0.1) 2px,
+        rgba(255, 0, 0, 0.1) 4px
+    );
+    animation: staticSweep 0.1s infinite;
+    pointer-events: none;
+    z-index: 15;
+}
+
+@keyframes staticSweep {
+    0% { opacity: 0; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0; }
+}
+
+/* Глитч-эффект ТОЛЬКО для разблокированного Спектра */
+#spectreSection:not(.locked):hover {
+    animation: spectreGlitch 0.3s infinite;
+    box-shadow: 
+        0 0 20px rgba(255, 107, 107, 0.8),
+        0 0 40px rgba(255, 0, 0, 0.6),
+        0 0 60px rgba(255, 255, 0, 0.4);
+}
+
+#spectreSection:not(.locked):hover h4,
+#spectreSection:not(.locked):hover p {
+    animation: textCorruption 0.5s infinite;
+    text-shadow: 
+        2px 0 #ff0000,
+        -2px 0 #00ffff,
+        0 2px #ff00ff,
+        0 -2px #ffff00;
+}
+
+#spectreSection:not(.locked):hover img {
+    filter: hue-rotate(180deg) contrast(200%) brightness(150%);
+    animation: imageGlitch 0.2s infinite;
+}
+
+#spectreSection:not(.locked):hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 0, 0, 0.1) 2px,
+        rgba(255, 0, 0, 0.1) 4px
+    );
+    animation: staticSweep 0.1s infinite;
+    pointer-events: none;
+    z-index: 15;
+}
+
+/* Для заблокированного состояния - никаких глитчей */
+#spectreSection.locked:hover {
+    /* Только стандартный hover-эффект */
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Убираем ВСЕ глитч-эффекты для заблокированного */
+#spectreSection.locked:hover {
+    animation: none !important;
+    box-shadow: none !important;
+    transform: scale(1.05) !important;
+    transition: transform 0.3s ease !important;
+}
+
+#spectreSection.locked:hover h4,
+#spectreSection.locked:hover p {
+    animation: none !important;
+    text-shadow: none !important;
+}
+
+#spectreSection.locked:hover img {
+    filter: none !important;
+    animation: none !important;
+}
+
+#spectreSection.locked:hover::before {
+    display: none !important;
+}
+
+/* Глитчи ТОЛЬКО для разблокированного */
+#spectreSection:not(.locked):hover {
+    animation: spectreGlitch 0.3s infinite;
+    box-shadow: 
+        0 0 20px rgba(255, 107, 107, 0.8),
+        0 0 40px rgba(255, 0, 0, 0.6),
+        0 0 60px rgba(255, 255, 0, 0.4);
+}
+
+#spectreSection:not(.locked):hover h4,
+#spectreSection:not(.locked):hover p {
+    animation: textCorruption 0.5s infinite;
+    text-shadow: 
+        2px 0 #ff0000,
+        -2px 0 #00ffff,
+        0 2px #ff00ff,
+        0 -2px #ffff00;
+}
+
+#spectreSection:not(.locked):hover img {
+    filter: hue-rotate(180deg) contrast(200%) brightness(150%);
+    animation: imageGlitch 0.2s infinite;
+}
+
+#spectreSection:not(.locked):hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 0, 0, 0.1) 2px,
+        rgba(255, 0, 0, 0.1) 4px
+    );
+    animation: staticSweep 0.1s infinite;
+    pointer-events: none;
+    z-index: 15;
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+    .sections-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+    }
+    
+    .section-card {
+        min-width: auto;
+        max-width: none;
+    }
+    
+    .modal-content {
+        max-width: 95% !important;
+        margin: 10px !important;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 480px) {
+    .sections-container {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .section-card {
+        min-height: 200px;
+    }
+    
+    .section-card h4 {
+        font-size: 16px;
+    }
+    
+    .section-card p {
+        font-size: 14px;
+    }
+    
+    /* Кассетный интерфейс для мобилок */
+    #spectreSection:not(.locked):hover {
+        animation: none; /* Убираем глитчи на тач-устройствах */
+    }
+    
+    /* Адаптация кассетного плеера */
+    .modal-content {
+        padding: 10px !important;
+    }
+    
+    #storyText {
+        font-size: 14px !important;
+        padding: 20px 10px !important;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+    
+    .section-card {
+        min-height: 180px;
+    }
+}
+
+.mobile-device #spectreSection:not(.locked):hover {
+    animation: none; /* Убираем hover на мобилках */
+}
+
+.mobile-glitch {
+    animation: spectreGlitch 0.3s infinite !important;
+}
+
+.mobile-glitch h4,
+.mobile-glitch p {
+    animation: textCorruption 0.5s infinite !important;
+}
