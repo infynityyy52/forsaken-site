@@ -3529,10 +3529,16 @@ function startAutoClick() {
 }
 
 function updateUI() {
-    document.getElementById('cardMoney').textContent = cardMoney;
-    document.getElementById('cardsCollected').textContent = Object.keys(collection).length;
-    document.getElementById('totalClicks').textContent = totalClicks;
-    document.getElementById('clickPower').textContent = clickPower;
+    let cardMoneyElement = document.getElementById('cardMoney');
+    let cardsCollectedElement = document.getElementById('cardsCollected');
+    let totalClicksElement = document.getElementById('totalClicks');
+    let clickPowerElement = document.getElementById('clickPower');
+    
+    // Обновляем только если элементы существуют
+    if (cardMoneyElement) cardMoneyElement.textContent = cardMoney;
+    if (cardsCollectedElement) cardsCollectedElement.textContent = Object.keys(collection).length;
+    if (totalClicksElement) totalClicksElement.textContent = totalClicks;
+    if (clickPowerElement) clickPowerElement.textContent = clickPower;
 
     // Обновляем цены апгрейдов
     let powerBtn = document.getElementById('powerUpgrade');
@@ -5985,4 +5991,5 @@ function unlockSpectreSection() {
             title.style.textShadow = '0 0 10px #ff6b6b';
         }
     }
+
 }
